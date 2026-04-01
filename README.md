@@ -6,21 +6,23 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+ Segundo dados da Organização Mundial da Saúde (OMS), o Brasil possui dezenas de milhões de animais em situação de rua. Esse cenário constitui um grave desafio social e de saúde pública, no qual cidadãos e ONGs frequentemente buscam auxílio em suas redes de apoio para lidar com os resgates e superlotações. 
+ Dentre as dificuldades enfrentadas, observa-se a falta de ferramentas centralizadas para a divulgação e o gerenciamento de adoções, visto que as ONGs operam acima de sua capacidade e o cidadão comum, ao encontrar um animal, esbarra na falta de conhecimento e de canais eficientes para encontrar um novo lar para ele. 
+ Dessa forma, torna-se necessário cobrir essa lacuna tecnológica, para que o bem-estar animal não seja ainda mais afetado e para que a população tenha o suporte necessário ao tentar realizar uma doação responsável. 
+.
 
 ## Integrantes
 
 * Nome completo do aluno 1
 * Nome completo do aluno 2
 * Nome completo do aluno 3
-* Nome completo do aluno 4
+* Diego Bispo do Nascimento 
 * Nome completo do aluno 5
 
 
 ## Orientador
 
-* Nome completo do professor 1
-
+* Prof. Clóvis Lemos Tavares
 # Planejamento
 
 | Etapa         | Atividades |
