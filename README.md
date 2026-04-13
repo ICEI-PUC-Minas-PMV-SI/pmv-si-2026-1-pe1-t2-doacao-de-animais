@@ -17,7 +17,7 @@
 * Nome completo do aluno 2
 * Nome completo do aluno 3
 * Diego Bispo do Nascimento 
-* Nome completo do aluno 5
+* Mariana Eduarda Corrêa da Silva 
 
 
 ## Orientador
