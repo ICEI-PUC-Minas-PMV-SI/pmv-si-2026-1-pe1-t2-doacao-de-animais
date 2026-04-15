@@ -8,6 +8,22 @@ Caso deseje atribuir uma imagem a sua persona, utilize o site https://thisperson
 
 ## Personas
 
+Ana tem 27 anos, é uma professora que gostaria de ter animais em casa, pois sempre teve o sonho de adotar e ajudar ONG's de resgate de pet's. E após uma rápida busca encontrei dois cães um filhote, um com poucas semanas de
+vida e outro jovem. Ambos haviam sido resgatados em uma ONG a alguns dias, e por sorte encontrei esse site e pude ajudá-los a encontrar um lar ao adotá-los.
+ -Adotante
+
+João tem 30 anos e é motorista de aplicativo e ama animais. Há poucos dias encontrou alguns filhotes de gato sozinhos ao lado de uma casa abandonada. Infelizmente não pode ficar com eles, então buscou por alguma instituição que pudesse regatá-los. Foi então que encontrei esse site, vi que poderia registrar fotos com características de cada um deles físicas, idade aproximada, e de seus temperamentos para atrair pessoas que desejam adotar. Desde que fiz o cadastro 3 foram adotados, e espero conseguir um lar para os 2 que restaram.
+ - Doadora
+
+Marina tem 35 anos e é gerente e ativista de uma ONG de auxilio à animais. E depois que começou a registrar os animais resgatados pela ONG neste site
+conseguiu aumentar a quantidade mensal de doações. Com isso, pode-se ajudar mais pet's a entrarem uma família.
+ -Gerente de Operações em ONG de  Resgate de animais
+
+Maria tem 35 anos e é ativista e representante de um projeto de ajuda aos animais de sua cidade. Há tempos necessitava de mais ferramentas robustas para promover adoções e
+receber informações sobre animais abandonados.
+ - Representante de Projeto Municipal de Resgate
+
+
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
