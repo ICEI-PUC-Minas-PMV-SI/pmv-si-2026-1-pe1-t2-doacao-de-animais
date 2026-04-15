@@ -24,14 +24,28 @@ Lembre-se que você deve ser enumerar e descrever precisamente e personalizada t
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Administrador  | Disponibilizar formas de contato   | Agilizar o processo de adoção                   |
+|Administrador  | Cadastrar ONGs mais próximas       | Facilitar a adoção                              |
+|Administrador  | Criar filtros para o aplicativo    | Para que a escolha do animal ideal seja efetiva |
+|Administrador  | Disponibilizar atualizações        | Promover a fluidez do aplicativo                |
+|Administrador  | Cadastrar várias ONGs              | Fornecer mais opções para o cliente             |
+|Administrador  | Disponibilizar adaptações para     | Para que seja accessível para todos             |
+|               |  todos os tipos de dispositivos    |                                                 |
+|Administrador  | Layout acessível                   | Facilitar a navegação do usuário                |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                  |
+|Usuário do sistema | Saber detalhes sobre o animal                   | Para escolher o animal ideal               |
+|Usuário do sistema | Ter respostas rápidas                           | Tirar as dúvidas existentes                |
+|Usuário do sistema |Facilidade na navegação                          | Facilitar a adoção                         |
+|Usuário do sistema | Ter acesso a dados sobre as ONGs                | Para verificar se elas são confiáveis      |
+|Usuário do sistema | Ter dicas sobre como cuidar melhor de um animal | Gerar conforto e segurança para o pet      |
+|Usuário do sistema | Poder compartilhar informações                  | Para engajar novas pessoas a adotarem      |
+|Usuário do sistema |Fazer doações online                             | Para ajudar as ONGs deforma rápida e fácil |
+
+
 
 > **Links Úteis**:
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
@@ -46,19 +60,43 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | 
+|ID    | Descrição do Requisito                                                                               | Prioridade | 
 |------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
+|RF-001| Cadastro de Usuário: O sistema deve permitir que doadores e adotantes criem                             | MÉDIA |
+contas com e-mail e senha.     
+
+|RF-002|  CRUD de Animais: O usuário doador deve conseguir cadastrar, visualizar, editar e                       | ALTA  |
+excluir anúncios de animais.
+
+|RF-003| Atributos do Pet: O cadastro deve incluir campos obrigatórios: Nome, Espécie                            | ALTA  | 
+(Cão/Gato/Outros), Porte (Pequeno/Médio/Grande), Sexo e Idade aproximada.
+
+|RF-004| Galeria de Fotos: O sistema deve permitir o upload de pelo menos uma foto por                           | MÉDIA | 
+animal cadastrado.    
+
+|RF-005| Formulário de Contato: O sistema deve disponibilizar um botão de WhatsApp ou                            | MÉDIA | 
+chat interno para iniciar a conversa sobre a adoção.
+                   
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
+|RNF-001| Responsividade: A interface deve ser adaptável para dispositivos móveis, garantindo                 | ALTA  |
+acessibilidade em tablets e smartphones.
+ 
 |RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
 
+|RF-003| Atributos do Pet: O cadastro deve incluir campos obrigatórios: Nome, Espécie                            | ALTA  | 
+(Cão/Gato/Outros), Porte (Pequeno/Médio/Grande), Sexo e Idade aproximada.
+
+|RF-004| Galeria de Fotos: O sistema deve permitir o upload de pelo menos uma foto por                           | MÉDIA | 
+animal cadastrado.     
+
+|RF-005| Formulário de Contato: O sistema deve disponibilizar um botão de WhatsApp ou                            | MÉDIA | 
+chat interno para iniciar a conversa sobre a adoção.
+                   
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
 - [Requisitos Funcionais
