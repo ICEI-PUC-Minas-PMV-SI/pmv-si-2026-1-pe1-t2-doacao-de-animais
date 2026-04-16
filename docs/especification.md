@@ -4,9 +4,11 @@ O projeto visa atender três perfis de usuários: adotante, doadores, e Projetos
 Municipais de Resgate/ ONGs.
 
 ● Os que desejam adotar buscam animais disponíveis para adoção;
-● doadores que não podem ficar com os animais buscam registrar para que
+
+● Doadores que não podem ficar com os animais buscam registrar para que
 fiquem disponíveis aos adotantes;
-● projetos municipais de resgate de animais e ONGs necessitam disponibilizar
+
+● Projetos municipais de resgate de animais e ONGs necessitam disponibilizar
 os animais resgatados aos adotantes para que possam buscar novos animais
 sem sobrecarregar as instituições.
 
