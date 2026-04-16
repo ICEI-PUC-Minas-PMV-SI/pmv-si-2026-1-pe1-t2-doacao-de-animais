@@ -16,12 +16,13 @@ tentar realizar uma doação responsável.
 
 
 ## Problema
+Queremos ajudar no processo de adoção tornando-o mais efetivo e com maiores chances de sucesso. Então queremos agrupar todas as ONG's próximas, fornecer um sistema simplificado acessível a todos os individuos, ter um software chamativo que engaje as pessoas ao mesmo tempo que seja intuitivo, que as pessoas consigam doar ou ajudar na causa, que as ONG'sconsigam cadastrar seus animais, consigam conversas com os adotantes, ter acesso ao número de pessoas que visualizaram e a quantidade de anúncios pendentes ainda.
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
 
+**Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
 Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
 Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Conferir se está certo!**
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -34,10 +35,13 @@ O objetivo geral deste projeto é a criação da interface de um aplicativo de f
 que instrua a população e facilite a conexão entre pessoas que resgatam ou doam animais
 e potenciais adotantes.
 Como objetivos específicos, podemos destacar:
+     
      ● Oferecer uma plataforma digital intuitiva e de uso gratuito para apoiar a causa animal
      e promover utilidade social;
+     
      ● Conectar de forma otimizada cidadãos que encontraram animais com indivíduos
      interessados em adotar;
+     
      ● Instruir e conscientizar os usuários sobre os princípios da guarda responsável,
      visando diminuir os índices de adoção por impulso e devoluções.
 
