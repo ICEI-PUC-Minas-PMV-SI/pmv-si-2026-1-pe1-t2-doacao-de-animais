@@ -15,7 +15,7 @@
 
 * Nome completo do aluno 1
 * Nome completo do aluno 2
-* Nome completo do aluno 3
+* Caio de Souza Villela
 * Diego Bispo do Nascimento 
 * Mariana Eduarda Corrêa da Silva 
 
