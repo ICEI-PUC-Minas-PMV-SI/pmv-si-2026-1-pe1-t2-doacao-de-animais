@@ -1,20 +1,28 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+O crescimento desordenado das áreas urbanas e a falta de políticas públicas efetivas
+refletem-se diretamente no aumento do abandono de animais. Segundo dados da
+Organização Mundial da Saúde (OMS), o Brasil possui dezenas de milhões de animais em
+situação de rua. Esse cenário constitui um grave desafio social e de saúde pública, no qual
+cidadãos e ONGs frequentemente buscam auxílio em suas redes de apoio para lidar com os
+resgates e superlotações.
+Dentre as dificuldades enfrentadas, observa-se a falta de ferramentas centralizadas para a
+divulgação e o gerenciamento de adoções, visto que as ONGs operam acima de sua
+capacidade e o cidadão comum, ao encontrar um animal, esbarra na falta de conhecimento
+e de canais eficientes para encontrar um novo lar para ele.
+Dessa forma, torna-se necessário cobrir essa lacuna tecnológica, para que o bem-estar
+animal não seja ainda mais afetado e para que a população tenha o suporte necessário ao
+tentar realizar uma doação responsável.
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
-
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
 
 ## Problema
+Queremos ajudar no processo de adoção tornando-o mais efetivo e com maiores chances de sucesso. Então queremos agrupar todas as ONG's próximas, fornecer um sistema simplificado acessível a todos os individuos, ter um software chamativo que engaje as pessoas ao mesmo tempo que seja intuitivo, que as pessoas consigam doar ou ajudar na causa, que as ONG'sconsigam cadastrar seus animais, consigam conversas com os adotantes, ter acesso ao número de pessoas que visualizaram e a quantidade de anúncios pendentes ainda.
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
 
+**Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
 Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
 Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Conferir se está certo!**
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -23,29 +31,53 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo geral deste projeto é a criação da interface de um aplicativo de fácil acesso e uso
+que instrua a população e facilite a conexão entre pessoas que resgatam ou doam animais
+e potenciais adotantes.
+Como objetivos específicos, podemos destacar:
+     
+     ● Oferecer uma plataforma digital intuitiva e de uso gratuito para apoiar a causa animal
+     e promover utilidade social;
+     
+     ● Conectar de forma otimizada cidadãos que encontraram animais com indivíduos
+     interessados em adotar;
+     
+     ● Instruir e conscientizar os usuários sobre os princípios da guarda responsável,
+     visando diminuir os índices de adoção por impulso e devoluções.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A tecnologia móvel consiste em um campo que possibilita mobilização rápida e atuação em
+rede. Para a sociedade contemporânea, os aplicativos são mais do que ambientes
+utilizados para consumo; são também espaços de organização social, solidariedade e
+resolução de problemas logísticos locais.
+Portanto, a criação de um aplicativo para a resolução deste problema foi motivada pela
+urgência da causa animal, aliada à forte presença dos smartphones na vida da população,
+utilizando o alcance do meio digital para descentralizar o processo de adoção e empoderar
+o cidadão comum a agir.
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+Embora o abandono de animais seja um problema que afete toda a sociedade, o foco deste
+trabalho está na mobilização digital de jovens e adultos com autonomia para a adoção.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Assim, estabeleceu-se como público-alvo desta solução homens e mulheres,
+predominantemente entre 18 e 45 anos, pois além de possuírem maior familiaridade com
+interfaces de aplicativos, representam a faixa etária com maior probabilidade de
+independência financeira e residencial para assumir a responsabilidade de um animal de
+estimação.
+Além dos cidadãos comuns (protetores independentes e potenciais adotantes) com o perfil
+citado acima, o projeto também pode beneficiar secundariamente ONGs e abrigos que
+buscam ampliar a visibilidade de seus animais resgatados.
+
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
