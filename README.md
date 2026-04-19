@@ -15,7 +15,7 @@
 
 * Nome completo do aluno 1
 * Nome completo do aluno 2
-* Nome completo do aluno 3
+* Miguel Augusto da Silva Costa
 * Diego Bispo do Nascimento 
 * Mariana Eduarda Corrêa da Silva 
 
