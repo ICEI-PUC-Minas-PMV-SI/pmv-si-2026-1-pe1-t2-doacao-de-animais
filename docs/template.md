@@ -8,6 +8,7 @@ Explique as guias de estilo utilizadas no seu projeto.
 
 Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
 
+https://www.figma.com/make/dqkhITqgx1ve5O8sayrkNx/Modelo-1?fullscreen=1&t=TBjhPYEhcsIXnXnE-1
 
 ## Cores
 
