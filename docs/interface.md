@@ -29,7 +29,7 @@ A tela inicial apresenta um menu lateral com as principais seções do portal, e
 
 ![Exemplo de Wireframe](img/wireframe-example.png)
 
-(https://web.whatsapp.com/4de0527a-7033-414f-afbd-89a085a7e746)
+<img width="529" height="448" alt="image" src="https://github.com/user-attachments/assets/236b86ea-f6bc-4275-b036-07466bbe6194" />
 
  
 > **Links Úteis**:
