@@ -14,7 +14,7 @@
 ## Integrantes
 
 * Nome completo do aluno 1
-* Nome completo do aluno 2
+* Caio de Souza Villela
 * Miguel Augusto da Silva Costa
 * Diego Bispo do Nascimento 
 * Mariana Eduarda Corrêa da Silva 
