@@ -25,7 +25,7 @@ https://www.figma.com/site/ZOO8VfcLVItzkpR0VXhpHL/Wireframes?node-id=0-1&t=xOOM0
 
 ### Wireframes do site
 
-**Pagina inicial**
+####Pagina inicial
 
 Focamos em um layout simples e direto, que chamasse atenção para os pontos principais, como os filtros, a barra de busca e a opção de ver mais pets. A ideia foi facilitar a navegação do usuário, permitindo que ele encontre rapidamente um animal de interesse.
 Também pensamos em destacar o botão principal de “ver pets disponíveis”, para guiar o usuário logo no início da navegação. Além disso, organizamos o processo em etapas (encontrar, conhecer, adotar e levar para casa), para deixar mais claro como funciona a adoção.
