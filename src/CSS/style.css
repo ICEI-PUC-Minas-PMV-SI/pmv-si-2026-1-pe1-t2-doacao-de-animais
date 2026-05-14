@@ -337,8 +337,8 @@ main {
 }
 
 #buttun_home_1 {
-    background-color: white;
     height: 75%;
+    text-decoration: none;
     width: 45%;
     margin: 0;
     border-radius: 90px;
@@ -350,6 +350,21 @@ main {
     font-size: 15px;
     font-weight: 600;
     color: #0f5b45;
+    cursor: pointer;
+    background: linear-gradient(to right, #ffffff 50%, rgb(241, 231, 80) 50%);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    transition:
+        background-position 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    will-change: background-position, transform;
+    
+}
+
+#buttun_home_1:hover{
+    background-position: -100% 0%;
+    transform: scale(1.02);
+
 }
 
 #buttun_home_2 {
@@ -366,6 +381,22 @@ main {
     font-size: 15px;
     font-weight: 600;
     color: rgb(255, 255, 255);
+    text-decoration: none;
+        cursor: pointer;
+    background: linear-gradient(to right, #398D6B 50%, #b1e5d0 50%);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    transition:
+        background-position 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    will-change: background-position, transform;
+}
+
+#buttun_home_2:hover{
+    background-position: -100% 0%;
+    transform: scale(1.02);
+    color: #033924;
+
 }
 
 #mid_home {
