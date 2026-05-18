@@ -21,13 +21,13 @@ body {
 
 h3 {
     text-align: center;
-    font-size: 36px;
+    font-size: 20px;
     color: black;
 }
 
 p {
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     color: black;
     margin: 10px 0;
     padding: 20px 15px;
@@ -50,8 +50,8 @@ p {
 }
 
 .card-inteiro {
-    width: 800px;
-    height: 800px;
+    width: 400px;
+    height: 470px;
     border: 1px solid #000000;
     border-radius: 15px;
     overflow: hidden;
@@ -81,7 +81,7 @@ p {
     border: none;
     border-bottom: 4px solid #000000;
     cursor: pointer;
-    font-size: 48px;      
+    font-size: 25px;      
     flex: 4;            
 }
 
@@ -94,7 +94,7 @@ p {
     border: none;
     border-bottom: 4px solid #000000;
     cursor: pointer;
-    font-size: 36px;
+    font-size: 25px;
     flex: 1;             
 }
 
