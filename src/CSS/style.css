@@ -1194,14 +1194,14 @@ main {
 
 #section_pet_disponiveis {
     background-color: #ffffff;
-    height: 110vh;
+    height: 130vh;
     border-bottom: solid 2px black;
 }
 
 h1 {
     text-align: center;
     font-size: 36px;
-    color: #076b5e
+    color: #03685b;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
 
@@ -1255,7 +1255,7 @@ p {
 
 .card-inteiro {
     width: 250px;
-    height: 350px;
+    height: 430px;
     border-radius: 15px;
     overflow: hidden;
     margin: 30px;
