@@ -599,19 +599,6 @@ main {
     transform: translateY(-10px);
 }
 
-#bloco02 {
-    background-color: #ffffff;
-    width: 22%;
-    height: 80%;
-    border-radius: 10px;
-    box-shadow: 2px 1px 10px #cfcfcf;
-    padding: 0;
-    transition: transform 0.3s ease;
-}
-
-#bloco02:hover {
-    transform: translateY(-10px);
-}
 
 #bloco03 {
     background-color: #ffffff;
@@ -1611,14 +1598,14 @@ details:hover {
 
 h1 {
     text-align: center;
-    font-size: 90px;
+    font-size: 36px;
     color: black;
 
 }
 
 h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 20px;
     color: black;
     margin-top: -10px;
 }
@@ -1660,7 +1647,7 @@ p {
 
 .card-inteiro {
     width: 300px;
-    height: 600px;
+    height: 450px;
     border: 1px solid #000000;
     border-radius: 15px;
     overflow: hidden;
@@ -1723,4 +1710,21 @@ p {
 .card-inteiro:hover {
     transform: translateY(-20px); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.bloco2 {
+     width: 22% ;
+    height: 80% ;
+    border-radius: 10px;
+    box-shadow: 2px 1px 10px #cfcfcf;
+    padding: 0;
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+}
+
+#bloco02:hover {
+    transform: translateY(-10px);
+}
+
+
 }
