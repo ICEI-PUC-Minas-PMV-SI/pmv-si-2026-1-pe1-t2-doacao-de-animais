@@ -1227,8 +1227,8 @@ p {
     text-align: center;
     font-size: 10px;
     color: black;
-    margin: 10px 0;
-    padding: 20px 15px;
+    margin: 5px 0;
+    padding: 15px 10px;
     
 }
 
@@ -1248,16 +1248,16 @@ p {
 
 .card-inteiro {
     width: 200px;
-    height: 350px;
+    height: 400px;
     border: 1px solid #000000;
     border-radius: 15px;
     overflow: hidden;
-    margin: 50px;
+    margin: 10px;
     text-align: center;
     box-shadow: 0 5px 9px rgba(34, 33, 33, 0.1);
     padding: 10px;
     background-color: #f4fff5;
-    min-width: 280px;
+    
     
 
 }
@@ -1279,7 +1279,7 @@ p {
     border: none;
     border-bottom: 4px solid #000000;
     cursor: pointer;
-    font-size: 20px;      
+    font-size: 15px;      
     flex: 4;            
 }
 
@@ -1292,7 +1292,7 @@ p {
     border: none;
     border-bottom: 4px solid #000000;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 15px;
     flex: 1;             
 }
 
@@ -1300,7 +1300,7 @@ p {
 .container-botoes {
     display: flex;
     gap: 10px;           
-    padding: 0 10px 15px; 
+    padding: 0 8px 12px; 
     justify-content: center;
 }
 
