@@ -1249,7 +1249,7 @@ p {
     align-items: stretch;
     font-family: "Montserrat", sans-serif;
     max-width: 1200px;
-    margin-top: -40px;
+    margin-top: -30px;
    
 }
 
@@ -1260,9 +1260,9 @@ p {
     overflow: hidden;
     margin: 30px;
     text-align: center;
-    box-shadow: 0 10px 15px rgba(34, 33, 33, 0.1);
+    box-shadow: 15px rgba(34, 33, 33, 0.1);
     padding: 10px;
-    background-color: #f4fff5;
+    background-color: 4bd19c;
     
     
 
@@ -1273,6 +1273,7 @@ p {
     width: 100%;  
     object-fit: cover
     border-radius: 15px;
+    border: 1px solid #000000;
     
 
 }
