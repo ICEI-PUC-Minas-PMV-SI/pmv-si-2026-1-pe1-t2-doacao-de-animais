@@ -1272,7 +1272,7 @@ p {
     aspect-ratio: 16/9;
     width: 100%;  
     object-fit: cover
-    
+    border-radius: 15px;
     
 
 }
