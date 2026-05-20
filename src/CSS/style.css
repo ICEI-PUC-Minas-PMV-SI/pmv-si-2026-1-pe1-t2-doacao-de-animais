@@ -1279,7 +1279,7 @@ p {
     border: none;
     border-bottom: 4px solid #000000;
     cursor: pointer;
-    font-size: 10px;      
+    font-size: 20px;      
     flex: 4;            
 }
 
@@ -1292,7 +1292,7 @@ p {
     border: none;
     border-bottom: 4px solid #000000;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 20px;
     flex: 1;             
 }
 
@@ -1300,7 +1300,7 @@ p {
 .container-botoes {
     display: flex;
     gap: 10px;           
-    padding: 0 8px 12px; 
+    padding: 0 10px 15px; 
     justify-content: center;
 }
 
