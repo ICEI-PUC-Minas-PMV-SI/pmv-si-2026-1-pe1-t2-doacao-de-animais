@@ -1195,7 +1195,7 @@ main {
 #section_pet_disponiveis {
     background-color: #ffffff;
     height: 90vh;
-    border-bottom: solid 5px black;
+    border-bottom: solid 2px black;
 }
 
 h1 {
@@ -1249,6 +1249,7 @@ p {
     align-items: stretch;
     font-family: "Montserrat", sans-serif;
     max-width: 1200px;
+    margin-top: -40px;
    
 }
 
