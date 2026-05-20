@@ -1190,10 +1190,10 @@ main {
 
 /*FIM DA PAGINA BUSCAR PETS*/
 
-#section_fazer_quiz {
-    background-color: #df9711;
+#section_pet_disponiveis {
+    background-color: #ffffff;
     height: 90vh;
-    border-bottom: solid 10px black;
+    border-bottom: solid 5px black;
 }
 
 #section_doar {
