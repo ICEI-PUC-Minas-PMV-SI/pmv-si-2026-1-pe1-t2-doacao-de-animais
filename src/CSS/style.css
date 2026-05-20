@@ -1580,3 +1580,28 @@ details:hover {
     font-family: "Montserrat", sans-serif;
     font-style: italic;
 }
+
+/*Parte de entrar e cadastrar*/
+
+.entre-cadastre {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    color: rgb(255, 254, 254);
+    
+
+}
+
+.entre-cadastre:hover {
+    transform: translateY(3px); /* Eleva o elemento em 5 pixels */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cria profundidade no texto */
+    color: #ffffff; /* Opcional: muda para branco para destacar ainda mais */
+}
+
+/* Comportamento ao clicar ou tocar na tela do celular */
+.entre-cadastre:active {
+    transform: translateY( 1px); /* Desce um pouco ao ser pressionado */
+}
