@@ -1768,7 +1768,7 @@ details:hover {
 @media screen and (min-width: 1200px) {
    
     body {
-        max-width: 1200px; 
+        max-width: 100%; 
         margin: 0 auto;    
     }
 }
