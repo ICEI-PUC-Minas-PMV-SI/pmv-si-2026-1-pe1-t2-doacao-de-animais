@@ -48,10 +48,15 @@ function toggleEditar() {
         
         
         if (avisoFoto) avisoFoto.style.display = "flex";
-                       avisoFoto.style.alignItems = "center";
+                       avisoFoto.style.alignItems = "center";!important
                        avisoFoto.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
                        avisoFoto.style.color = "#ffffff";
                        avisoFoto.style.fontWeight = "bold";
+                       avisoFoto.style.borderradius= "15px"
+                       avisoFoto.style.height= "20px"
+                       avisoFoto.style.width= "70%"
+        
+        
 
         
         classesSimples.forEach(className => {
@@ -135,7 +140,7 @@ function atualizarFoto(input) {
     
     <p class="mapa">Rua dos Pet Lovers, 123 - São Paulo, SP</p>
 
-    <button class="editar-perfil" id="btn-editar-info" onclick="toggleEditarInfo()> "Editar informações</button>
+    <button class="editar-perfil" id="btn-editar-info" onclick="toggleEditarInfo()"> "Editar informações</button>
 
 </section>
 <script>
