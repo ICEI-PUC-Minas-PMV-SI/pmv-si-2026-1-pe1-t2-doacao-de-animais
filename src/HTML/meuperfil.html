@@ -39,28 +39,31 @@ function toggleEditar() {
     const btn = document.getElementById('btn-editar');
     const avisoFoto = document.getElementById('aviso-foto');
     
-    // Mapeamento das classes que você usou no seu HTML
     const classesSimples = ['Nome', 'idade', 'cidade'];
 
     if (!editando) {
-        // --- MODO EDIÇÃO ---
+        
         editando = true;
         btn.innerText = "Salvar perfil";
         
-        // Exibe o texto "Clique para mudar"
+        
         if (avisoFoto) avisoFoto.style.display = "flex";
+                       avisoFoto.style.alignItems = "center";
+                       avisoFoto.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+                       avisoFoto.style.color = "#ffffff";
+                       avisoFoto.style.fontWeight = "bold";
 
-        // Transforma os textos dos h5 em campos de digitação (inputs)
+        
         classesSimples.forEach(className => {
             const elemento = document.querySelector(`.${className}`);
             if (elemento) {
                 const textoAtual = elemento.innerText;
-                // Guardamos a classe original em um atributo personalizado (data-classe) para não perdê-la
+                
                 elemento.innerHTML = `<input type="text" value="${textoAtual}" class="input-perfil-dinamico" data-classe="${className}">`;
             }
         });
 
-        // Transforma o parágrafo da biografia (Historia-minha) em uma caixa de texto maior
+        
         const elementoBio = document.querySelector('.Historia-minha');
         if (elementoBio) {
             const bioAtual = elementoBio.innerText;
@@ -68,14 +71,14 @@ function toggleEditar() {
         }
 
     } else {
-        // --- MODO SALVAR ---
+        
         editando = false;
         btn.innerText = "Editar perfil";
         
-        // Esconde o aviso da foto
+        
         if (avisoFoto) avisoFoto.style.display = "none";
 
-        // Pega os valores digitados nos inputs e joga de volta como texto simples
+        
         const inputs = document.querySelectorAll('.input-perfil-dinamico');
         inputs.forEach(input => {
             const className = input.getAttribute('data-classe');
@@ -85,7 +88,7 @@ function toggleEditar() {
             }
         });
 
-        // Pega o valor do textarea da biografia e salva no parágrafo
+        
         const textareaBio = document.querySelector('.textarea-perfil-dinamico');
         const elementoBio = document.querySelector('.Historia-minha');
         if (textareaBio && elementoBio) {
@@ -94,20 +97,20 @@ function toggleEditar() {
     }
 }
 
-// Abre a janela do computador para escolher o arquivo de imagem
+
 function acionarEscolhaFoto() {
     if (editando) {
         document.getElementById('input-foto').click();
     }
 }
 
-// Carrega a imagem selecionada na tela imediatamente
+
 function atualizarFoto(input) {
     if (input.files && input.files[0]) {
         const leitor = new FileReader();
         
         leitor.onload = function(e) {
-            // Busca a imagem pela classe que você colocou (.foto-perfil)
+            
             const imgPerfil = document.querySelector('.foto-perfil');
             if (imgPerfil) {
                 imgPerfil.src = e.target.result;
@@ -132,10 +135,54 @@ function atualizarFoto(input) {
     
     <p class="mapa">Rua dos Pet Lovers, 123 - São Paulo, SP</p>
 
-    <button class="editar-perfil">Editar informações</button>
+    <button class="editar-perfil" id="btn-editar-info" onclick="toggleEditarInfo()> "Editar informações</button>
 
 </section>
+<script>
+let editandoInfo = false;
+
+function toggleEditarInfo() {
+    const btnInfo = document.getElementById('btn-editar-info');
+    
+    
+    const classesInfo = ['email', 'telefone', 'mapa'];
+
+    if (!editandoInfo) {
+        
+        editandoInfo = true;
+        btnInfo.innerText = "Salvar informações";
+
+        
+        classesInfo.forEach(className => {
+            const elemento = document.querySelector(`.${className}`);
+            if (elemento) {
+                const textoAtual = elemento.innerText;
+                
+                elemento.innerHTML = `<input type="text" value="${textoAtual}" class="input-info-dinamico" data-classe="${className}" style="width: 100%; max-width: 300px; padding: 4px; margin: 4px 0;">`;
+            }
+        });
+
+    } else {
+        
+        editandoInfo = false;
+        btnInfo.innerText = "Editar informações";
+
+        
+        const inputs = document.querySelectorAll('.input-info-dinamico');
+        inputs.forEach(input => {
+            const className = input.getAttribute('data-classe');
+            const elementoOriginal = document.querySelector(`.${className}`);
+            if (elementoOriginal) {
+                elementoOriginal.innerHTML = input.value;
+            }
+        });
+    }
+}
+    
+</script>
+    
 </div>
+    
 
 <div class="favoritos">
 <section class="animais-favoritos">
