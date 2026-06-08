@@ -1764,13 +1764,6 @@ details:hover {
     }
 }
 
-/* MONITORES GRANDES (Telas maiores que 1200px) */
-@media screen and (min-width: 1200px) {
-   
-    body {
-        max-width: 100%; 
-        margin: 0 auto;    
-    }
-}
+
 
 
