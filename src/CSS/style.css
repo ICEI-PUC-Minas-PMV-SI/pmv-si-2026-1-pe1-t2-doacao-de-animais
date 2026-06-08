@@ -1735,6 +1735,34 @@ details:hover {
     transform: translateY( 1px); /* Desce um pouco ao ser pressionado */
 }
 
+.animais-favoritos, #lista-historico {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 25px; /* Cria um espaço interno na parte inferior para o card não vazar */
+    box-sizing: border-box;
+}
+
+
+
+.animais-favoritos h5, #lista-historico h5 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.card-copia-historico {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
 
 
 
