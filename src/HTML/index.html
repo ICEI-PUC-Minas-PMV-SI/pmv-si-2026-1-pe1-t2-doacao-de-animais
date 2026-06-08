@@ -32,7 +32,33 @@
                 <div id="title_header">
                     <h1>AdoPet</h1>
                     <p>Amor em cada adoção</p>
-                    <a href="..\HTML\entrar.html" class="entre-cadastre"><strong>Entre ou se cadastre agora!</strong></a>
+                    <a href="..\HTML\entrar.html" class="entre-cadastre" id="texto-login-status"><strong>Entre ou se cadastre agora!</strong></a>
+                    
+    <script>
+        
+    window.addEventListener('DOMContentLoaded', function() {
+    // 1. Busca no navegador se o usuário está logado
+    const estaAutenticado = localStorage.getItem('estaAutenticado');
+    const usuarioLogado = localStorage.getItem('usuarioLogado'); 
+
+    // 2. Procura pelo link no HTML
+    const elementoLink = document.getElementById('texto-login-status');
+
+    // 3. Se estiver logado, muda o texto E o destino do link
+    if (estaAutenticado === 'true' && usuarioLogado && elementoLink) {
+        
+        // Separa o nome antes do '@'
+        const nomeUsuario = usuarioLogado.split('@')[0];
+        
+        // Altera o texto para o nome do usuário
+        elementoLink.innerHTML = `<strong>Olá, ${nomeUsuario}!</strong>`;
+        
+        // 🌟 MÁGICA AQUI: Altera o link para ir direto para o perfil do usuário logado
+        elementoLink.href = "meuperfil.html";
+    }
+});
+    
+    </script>
                 </div>
 
             </div>
