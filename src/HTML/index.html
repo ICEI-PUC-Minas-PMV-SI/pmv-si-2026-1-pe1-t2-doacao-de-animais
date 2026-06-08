@@ -502,7 +502,27 @@
             </div>
             </div>           
 
+<script>
+function adicionarAoHistorico(nomePet, fotoPet) {
+    // 1. Busca o histórico de adoção atual ou começa uma lista vazia []
+    let historico = JSON.parse(localStorage.getItem('historicoPets')) || [];
 
+    // 2. Remove o pet se ele já estiver na lista (para ele voltar para o topo se for clicado de novo)
+    historico = historico.filter(pet => pet.nome !== nomePet);
+
+    // 3. Adiciona o novo pet no topo da lista (início do array)
+    historico.unshift({ 
+        nome: nomePet, 
+        foto: fotoPet 
+    });
+
+    // 4. Salva a nova lista atualizada no navegador
+    localStorage.setItem('historicoPets', JSON.stringify(historico));
+
+    // 5. Dá um aviso visual para você saber que deu certo!
+    alert(nomePet + " foi adicionado ao seu histórico de adoção com sucesso!");
+}
+</script>
 
 
 </div>
