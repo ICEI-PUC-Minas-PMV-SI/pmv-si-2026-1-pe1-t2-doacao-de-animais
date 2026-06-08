@@ -13,18 +13,112 @@
 
 <article class="meu-perfil">
     <h1>Meu perfil</h1>
+    
+     <div class="foto-container" onclick="acionarEscolhaFoto()">
      <img class="foto-perfil" src="https://blog-static.petlove.com.br/wp-content/uploads/2024/05/10165128/dia-das-maes-Petlove.jpg" alt="Foto de perfil" >
+     <div class="alterar-foto" id="aviso-foto">Clique para mudar</div>
+    </div>
+
+    <input type="file" id="input-foto" accept="image/*" onchange="atualizarFoto(this)" style="display: none;">
   
     <p> Bem vindo de volta!</p>
 
-    <h4>Sobre mim</h4>
-    <h5> Maria Silva </h5>
-    <h5>   28 anos </h5>
-    <h5> São Paulo, SP</h5>
-    <p> Apaixonada por animais e em busca de um companheiro de quatro patas para compartilhar momentos especiais.</p>
+    <h4 class="historia">Sobre mim</h4>
+    <h5 class="Nome"> Maria Silva </h5>
+    <h5 class="idade">   28 anos </h5>
+    <h5 class="cidade"> São Paulo, SP</h5>
+    <p class="Historia-minha"> Apaixonada por animais e em busca de um companheiro de quatro patas para compartilhar momentos especiais.</p>
 
 
-    <button class="editar-perfil1">Editar perfil</button>
+    <button class="editar-perfil1" id="btn-editar" onclick="toggleEditar()">Editar perfil</button>
+    
+    <script>
+    let editando = false;
+
+function toggleEditar() {
+    const btn = document.getElementById('btn-editar');
+    const avisoFoto = document.getElementById('aviso-foto');
+    
+    // Mapeamento das classes que você usou no seu HTML
+    const classesSimples = ['Nome', 'idade', 'cidade'];
+
+    if (!editando) {
+        // --- MODO EDIÇÃO ---
+        editando = true;
+        btn.innerText = "Salvar perfil";
+        
+        // Exibe o texto "Clique para mudar"
+        if (avisoFoto) avisoFoto.style.display = "flex";
+
+        // Transforma os textos dos h5 em campos de digitação (inputs)
+        classesSimples.forEach(className => {
+            const elemento = document.querySelector(`.${className}`);
+            if (elemento) {
+                const textoAtual = elemento.innerText;
+                // Guardamos a classe original em um atributo personalizado (data-classe) para não perdê-la
+                elemento.innerHTML = `<input type="text" value="${textoAtual}" class="input-perfil-dinamico" data-classe="${className}">`;
+            }
+        });
+
+        // Transforma o parágrafo da biografia (Historia-minha) em uma caixa de texto maior
+        const elementoBio = document.querySelector('.Historia-minha');
+        if (elementoBio) {
+            const bioAtual = elementoBio.innerText;
+            elementoBio.innerHTML = `<textarea class="textarea-perfil-dinamico" rows="3">${bioAtual}</textarea>`;
+        }
+
+    } else {
+        // --- MODO SALVAR ---
+        editando = false;
+        btn.innerText = "Editar perfil";
+        
+        // Esconde o aviso da foto
+        if (avisoFoto) avisoFoto.style.display = "none";
+
+        // Pega os valores digitados nos inputs e joga de volta como texto simples
+        const inputs = document.querySelectorAll('.input-perfil-dinamico');
+        inputs.forEach(input => {
+            const className = input.getAttribute('data-classe');
+            const elementoOriginal = document.querySelector(`.${className}`);
+            if (elementoOriginal) {
+                elementoOriginal.innerHTML = input.value;
+            }
+        });
+
+        // Pega o valor do textarea da biografia e salva no parágrafo
+        const textareaBio = document.querySelector('.textarea-perfil-dinamico');
+        const elementoBio = document.querySelector('.Historia-minha');
+        if (textareaBio && elementoBio) {
+            elementoBio.innerHTML = textareaBio.value;
+        }
+    }
+}
+
+// Abre a janela do computador para escolher o arquivo de imagem
+function acionarEscolhaFoto() {
+    if (editando) {
+        document.getElementById('input-foto').click();
+    }
+}
+
+// Carrega a imagem selecionada na tela imediatamente
+function atualizarFoto(input) {
+    if (input.files && input.files[0]) {
+        const leitor = new FileReader();
+        
+        leitor.onload = function(e) {
+            // Busca a imagem pela classe que você colocou (.foto-perfil)
+            const imgPerfil = document.querySelector('.foto-perfil');
+            if (imgPerfil) {
+                imgPerfil.src = e.target.result;
+            }
+        }
+        
+        leitor.readAsDataURL(input.files[0]);
+    }
+}
+        
+</script>
 
 
 </article>  
