@@ -165,10 +165,96 @@
                 <p2>Sua senha deve ter entre 8 e 20 caracteres, conter letras e números e não deve conter espaços,
                 caracteres especiais ou emojis</p2>
             </div>
-            
 
+            <script>
+                function realizarCadastro(event) {
+    event.preventDefault();
 
-        
+    // 🌟 CAPTURA INTELIGENTE DE ACORDO COM SEUS NOVOS IDs:
+    // Pega os dois inputs que usam id="example1" (Nome é o primeiro, Email é o segundo)
+    const inputsTexto = document.querySelectorAll('#example1');
+    const nome = inputsTexto[0] ? inputsTexto[0].value.trim() : '';
+    const email = inputsTexto[1] ? inputsTexto[1].value.trim() : '';
+
+    // Pega os dois inputs que usam id="input1" (Senha é o primeiro, Confirmar é o segundo)
+    const inputsSenha = document.querySelectorAll('#input1');
+    const senha = inputsSenha[0] ? inputsSenha[0].value : '';
+    const confirmarSenha = inputsSenha[1] ? inputsSenha[1].value : '';
+    
+    const msgErro = document.getElementById('mensagem-erro-cadastro');
+    const msgSucesso = document.getElementById('mensagem-sucesso-cadastro');
+
+    // Esconde mensagens antigas na tela
+    if (msgErro) msgErro.style.display = "none";
+    if (msgSucesso) msgSucesso.style.display = "none";
+
+    // 1. Validação de campos vazios
+    if (!nome || !email || !senha || !confirmarSenha) {
+        exibirErro("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    // 2. Validação do tamanho da senha (8 a 20 caracteres)
+    if (senha.length < 8 || senha.length > 20) {
+        exibirErro("A senha deve ter entre 8 e 20 caracteres.");
+        return;
+    }
+
+    // 3. Validação das regras da senha (letras e números, sem espaços/especiais)
+    const apenasLetrasENumeros = /^[a-zA-Z0-9]+$/;
+    const temLetra = /[a-zA-Z]/.test(senha);
+    const temNumero = /[0-9]/.test(senha);
+
+    if (!apenasLetrasENumeros.test(senha) || !temLetra || !temNumero) {
+        exibirErro("A senha deve conter letras e números, e não deve conter espaços, caracteres especiais ou emojis.");
+        return;
+    }
+
+    // 4. Validação se as senhas são iguais
+    if (senha !== confirmarSenha) {
+        exibirErro("As senhas não coincidem. Digite novamente.");
+        return;
+    }
+
+    // 5. BANCO DE DADOS LOCAL (localStorage) - Envia para o entrar.html
+    let usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    // Impede cadastrar o mesmo e-mail duas vezes
+    const emailExiste = usuariosCadastrados.some(user => user.email === email);
+    if (emailExiste) {
+        exibirErro("Este e-mail já está cadastrado.");
+        return;
+    }
+
+    // Adiciona o usuário na lista do navegador
+    usuariosCadastrados.push({
+        nome: nome,
+        email: email,
+        senha: senha
+    });
+
+    localStorage.setItem('usuarios', JSON.stringify(usuariosCadastrados));
+
+    // Feedback de sucesso e redirecionamento de página
+    if (msgSucesso) msgSucesso.style.display = "block";
+    setTimeout(() => {
+        window.location.href = "entrar.html"; // Vai direto para o login na mesma pasta
+    }, 2000);
+}
+
+// Função auxiliar para mostrar o erro sem quebrar o código
+function exibirErro(texto) {
+    const msgErro = document.getElementById('mensagem-erro-cadastro');
+    if (msgErro) {
+        msgErro.innerText = texto;
+        msgErro.style.display = "block";
+    } else {
+        alert(texto); // Caso você esqueça de colocar as divs de aviso no HTML, ele avisa via alerta
+    }
+}
+            </script>
+
+            <div id="mensagem-erro-cadastro" style="display: none; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; margin: 15px auto; border-radius: 5px; font-size: 14px; text-align: center; font-weight: bold; max-width: 350px;"></div>
 
         <a href="../HTML/meuperfil.html" class="Botao">Cadastrar</a>
         <h2>Já tem uma conta?<strong><a href="../HTML/entrar.html" class="Cadastre-se"> Entre agora!</a></strong></h2>
