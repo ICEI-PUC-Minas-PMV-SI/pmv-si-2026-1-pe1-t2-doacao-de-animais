@@ -130,10 +130,10 @@ h5 {
 
 
 
-.email{
+.email {
    color: rgba(0, 0, 0, 0.616);
     display: block; /* Faz o texto ficar na mesma linha do ícone */
-    margin-top: 5px;
+    margin-top: -20px;!important
     padding-top: 5px;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
