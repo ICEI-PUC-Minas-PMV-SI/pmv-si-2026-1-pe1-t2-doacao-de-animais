@@ -1736,33 +1736,7 @@ details:hover {
 }
 
 
-/* CELULARES (Telas pequenas de até 480px) */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px; 
-    }
-    .container, .menu, .conteudo {
-        width: 100% !important; 
-        flex-direction: column !important; 
-    }
-}
 
-/* CELULARES GRANDES / TABLETS PEQUENOS (De 481px até 768px) */
-@media screen and (max-width: 768px) {
-   
-    .grid-layout {
-        display: block !important; 
-    }
-}
-
-/* TABLETS E LIKPADS (De 769px até 1024px) */
-@media screen and (max-width: 1024px) {
-    
-    img {
-        max-width: 100%; 
-        height: auto;
-    }
-}
 
 
 
