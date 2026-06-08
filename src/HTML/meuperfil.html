@@ -125,6 +125,27 @@ function atualizarFoto(input) {
         leitor.readAsDataURL(input.files[0]);
     }
 }
+
+//PARTE QUE MANTEM O USUARIO LOGADO//       
+const estaAutenticado = localStorage.getItem('estaAutenticado');
+    const usuarioLogado = localStorage.getItem('usuarioLogado');
+
+    
+    if (estaAutenticado !== 'true') {
+        alert("Acesso negado! Por favor, faça o login primeiro.");
+        window.location.href = "entrar.html"; 
+        return;
+    }
+
+    
+    const campoNomePerfil = document.querySelector('.Nome');
+    if (campoNomePerfil && usuarioLogado) {
+        // Se quiser exibir o e-mail de quem logou no lugar do nome estático
+        // campoNomePerfil.innerText = usuarioLogado; 
+    }
+
+
+        
         
 </script>
 
