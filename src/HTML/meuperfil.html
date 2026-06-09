@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/meuperfil.css">
+    <title>Meu perfil</title>
+</head>
+<body>
+<header class="cabecalho">
+    <h2 class="voltar"><a href="../HTML/index.html"> &#8592; Voltar à página inicial</a></h2>
+</header>   
+
+<article class="meu-perfil">
+    <h1>Meu perfil</h1>
+    
+     <div class="foto-container" onclick="acionarEscolhaFoto()">
+     <img class="foto-perfil" src="https://blog-static.petlove.com.br/wp-content/uploads/2024/05/10165128/dia-das-maes-Petlove.jpg" alt="Foto de perfil" >
+     <div class="alterar-foto" id="aviso-foto"><center>Clique para editar a foto</center></div>
+    </div>
+
+    <input type="file" id="input-foto" accept="image/*" onchange="atualizarFoto(this)" style="display: none;">
+  
+    <p> Bem vindo de volta!</p>
+
+    <h4 class="historia">Sobre mim</h4>
+    <h5 class="Nome"> Maria Silva </h5>
+    <h5 class="idade">   28 anos </h5>
+    <h5 class="cidade"> São Paulo, SP</h5>
+    <p class="Historia-minha"> Apaixonada por animais e em busca de um companheiro de quatro patas para compartilhar momentos especiais.</p>
+
+
+    <button class="editar-perfil1" id="btn-editar" onclick="toggleEditar()">Editar perfil</button>
+    
+    <script>
+    let editando = false;
+
+function toggleEditar() {
+    const btn = document.getElementById('btn-editar');
+    const avisoFoto = document.getElementById('aviso-foto');
+    
+    const classesSimples = ['Nome', 'idade', 'cidade'];
+
+    if (!editando) {
+        
+        editando = true;
+        btn.innerText = "Salvar perfil";
+        
+        
+        if (avisoFoto) avisoFoto.style.display = "flex";
+                       avisoFoto.style.alignItems = "center";!important
+                       avisoFoto.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+                       avisoFoto.style.color = "#ffffff";
+                       avisoFoto.style.fontWeight = "bold";
+                       avisoFoto.style.borderradius= "15px"
+                       avisoFoto.style.height= "20px"
+                       avisoFoto.style.width= "70%"
+        
+        
+
+        
+        classesSimples.forEach(className => {
+            const elemento = document.querySelector(`.${className}`);
+            if (elemento) {
+                const textoAtual = elemento.innerText;
+                
+                elemento.innerHTML = `<input type="text" value="${textoAtual}" class="input-perfil-dinamico" data-classe="${className}">`;
+            }
+        });
+
+        
+        const elementoBio = document.querySelector('.Historia-minha');
+        if (elementoBio) {
+            const bioAtual = elementoBio.innerText;
+            elementoBio.innerHTML = `<textarea class="textarea-perfil-dinamico" rows="3">${bioAtual}</textarea>`;
+        }
+
+    } else {
+        
+        editando = false;
+        btn.innerText = "Editar perfil";
+        
+        
+        if (avisoFoto) avisoFoto.style.display = "none";
+
+        
+        const inputs = document.querySelectorAll('.input-perfil-dinamico');
+        inputs.forEach(input => {
+            const className = input.getAttribute('data-classe');
+            const elementoOriginal = document.querySelector(`.${className}`);
+            if (elementoOriginal) {
+                elementoOriginal.innerHTML = input.value;
+            }
+        });
+
+        
+        const textareaBio = document.querySelector('.textarea-perfil-dinamico');
+        const elementoBio = document.querySelector('.Historia-minha');
+        if (textareaBio && elementoBio) {
+            elementoBio.innerHTML = textareaBio.value;
+        }
+    }
+}
+
+
+function acionarEscolhaFoto() {
+    if (editando) {
+        document.getElementById('input-foto').click();
+    }
+}
+
+
+function atualizarFoto(input) {
+    if (input.files && input.files[0]) {
+        const leitor = new FileReader();
+        
+        leitor.onload = function(e) {
+            
+            const imgPerfil = document.querySelector('.foto-perfil');
+            if (imgPerfil) {
+                imgPerfil.src = e.target.result;
+            }
+        }
+        
+        leitor.readAsDataURL(input.files[0]);
+    }
+}
+
+//PARTE QUE MANTEM O USUARIO LOGADO//       
+const estaAutenticado = localStorage.getItem('estaAutenticado');
+    const usuarioLogado = localStorage.getItem('usuarioLogado');
+
+    
+    if (estaAutenticado !== 'true') {
+        alert("Acesso negado! Por favor, faça o login primeiro.");
+        window.location.href = "entrar.html"; 
+        return;
+    }
+
+    
+    const campoNomePerfil = document.querySelector('.Nome');
+    if (campoNomePerfil && usuarioLogado) {
+        // Se quiser exibir o e-mail de quem logou no lugar do nome estático
+        // campoNomePerfil.innerText = usuarioLogado; 
+    }
+
+
+        
+        
+</script>
+
+
+</article>  
+
+<div class="informacoes">
+<section class="Informações-pessoais">
+    <h6>Informações pessoais</h6>
+    <p class="email">maria.silva@email.com</p>
+    
+    <p class="telefone">(11) 99999-9999</p>
+    
+    <p class="mapa">Rua dos Pet Lovers, 123 - São Paulo, SP</p>
+
+    <button class="editar-perfil" id="btn-editar-info" onclick="toggleEditarInfo()"> "Editar informações</button>
+
+</section>
+<script>
+let editandoInfo = false;
+
+function toggleEditarInfo() {
+    const btnInfo = document.getElementById('btn-editar-info');
+    
+    
+    const classesInfo = ['email', 'telefone', 'mapa'];
+
+    if (!editandoInfo) {
+        
+        editandoInfo = true;
+        btnInfo.innerText = "Salvar informações";
+
+        
+        classesInfo.forEach(className => {
+            const elemento = document.querySelector(`.${className}`);
+            if (elemento) {
+                const textoAtual = elemento.innerText;
+                
+                elemento.innerHTML = `<input type="text" value="${textoAtual}" class="input-info-dinamico" data-classe="${className}" style="width: 100%; max-width: 300px; padding: 4px; margin: 4px 0;">`;
+            }
+        });
+
+    } else {
+        
+        editandoInfo = false;
+        btnInfo.innerText = "Editar informações";
+
+        
+        const inputs = document.querySelectorAll('.input-info-dinamico');
+        inputs.forEach(input => {
+            const className = input.getAttribute('data-classe');
+            const elementoOriginal = document.querySelector(`.${className}`);
+            if (elementoOriginal) {
+                elementoOriginal.innerHTML = input.value;
+            }
+        });
+    }
+}
+    
+</script>
+    
+</div>
+    
+
+<div class="favoritos">
+<section class="animais-favoritos" id="lista-historico" style="padding-bottom: 30px; box-sizing: border-box;">
+    <h8> Historico </h8>
+
+    <h7> Ainda não há animais no histórico.</h7>
+    
+</section>
+ <script>
+window.onload = function() {
+    const lista = document.getElementById('lista-historico');
+    const historico = JSON.parse(localStorage.getItem('historicoPets')) || [];
+
+    if (historico.length > 0 && lista) {
+        lista.innerHTML = ''; 
+
+        lista.innerHTML = '<h5 style="width: 100%; margin-bottom: 20px; text-align: center;">Historico</h5>';
+
+        lista.style.display = "flex";
+        lista.style.justifyContent = "center";
+        lista.style.gap = "20px";
+        lista.style.flexWrap = "wrap";
+        lista.style.alignItems = "center";
+
+        const ultimosTres = historico.slice(0, 3);
+
+        ultimosTres.forEach(pet => {
+            // 🌟 CORRIGIDO: Agora abrindo e fechando com crases (`) perfeitamente
+            lista.innerHTML += `
+                <div class="card-copia-historico" style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 15px; width: 190px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); text-align: center; margin: 10px 0;">
+                    <img src="${pet.foto}" alt="${pet.nome}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;">
+                    <span style="background: #e8f5e9; color: #2e7d32; font-size: 12px; padding: 4px 10px; border-radius: 20px; font-weight: bold; display: inline-block;">Adotado!</span>
+                </div>
+            `;
+        });
+    }
+};
+</script>
+
+    
+</div>
+
+
+    
+</body>
+</html>
