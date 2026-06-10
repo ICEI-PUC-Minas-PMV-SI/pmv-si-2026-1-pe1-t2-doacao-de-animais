@@ -8,11 +8,12 @@
   </head>
   
   <body>
-
+<div class="container" style="display: flex; flex-direction: column; align-items: center;" id="ititle">
     <h1>Cadastre Pets para adoção</h1>
-    
-    <h2> Informações do Pet </h2>
+        <h2> Informações do Pet </h2>
+</div>
 
+<div class="container" style="display: flex; flex-direction: column; align-items: center;">
 <form name="meuForm" onsubmit="capturarDados(event)" method="post" action="">
     <label for="name">Nome:</label>
     <input type="text" id="iname" name="name" placeholder="Digite o nome do pet" required><br><br>
@@ -20,32 +21,33 @@
     <label for="age">Idade Aproximada(Meses):</label>
     <input type="number" id="iage" name="age" placeholder="Digite a idade aproximada em meses" required><br><br>
 
-    <div class="ratio-box"> Sexo: <br>
+
+<div class="ratio-box"> Sexo: <br>
         <input type="radio" name="gender" id="male" class="form-control" value="male">
         <label for="male" class="form-label">Macho</label>
-    </div>
-    <div class="ratio-box">
+</div>
+<div class="ratio-box">
         <input type="radio" name="gender" id="female" class="form-control" value="female">
         <label for="female" class="form-label">Fêmea</label>
-    </div>
+</div>
     <br>
 
-    <div class="ratio-box"> Tipo de Pet: <br>
+<div class="ratio-box"> Tipo de Pet: <br>
         <input type="radio" name="typepet" id="itypedog" class="form-control" value="typedog">
         <label for="typepdog" class="form-label">Cachorro</label>
-    </div>
-    <div class="ratio-box">
+</div>
+<div class="ratio-box">
         <input type="radio" name="typepet" id="itypecat" class="form-control" value="typecat">
         <label for="typepcat" class="form-label">Gato</label>
-    </div>
-    <div class="ratio-box">
+</div>
+<div class="ratio-box">
         <input type="radio" name="typepet" id="itypebird" class="form-control" value="typebird">
         <label for="typebird" class="form-label">Pássaro</label>
-    </div>
-    <div class="ratio-box">
+</div>
+<div class="ratio-box">
         <input type="radio" name="typepet" id="itypeothers" class="form-control" value="typeothers">
         <label for="typepothers" class="form-label">Outros</label>
-    </div>
+ </div>
 <br>
     <div class="ratio-box"> Informações de Saúde: <br>
         <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
@@ -76,7 +78,8 @@
     <label for="fotos"> Envie até 5 fotos: </label> <BR>
     <input type="file" id="ifile" name="file" accept="image/*" required><br>
 
-    <div id="preview"></div>
+    <div class="container" id="preview"></div>
+</div>
 
     <script>
         document.getElementbyid("ifile").onchange = function(e) {
@@ -99,9 +102,11 @@
             }
         };
     </script>
-
+<div class="container" style="display: flex; flex-direction: column; align-items: center;">
     <input type="submit" value="Enviar">
     </form>
+
+    <link rel="stylesheet" href="style.css">
 
 </body>
 
