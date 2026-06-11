@@ -300,5 +300,28 @@ h8 {
     
 }
 
+.sair-perfil1 {
+
+ background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+    margin-left: 25%;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    border-radius: 20px;
+
+}
+
+
 /* FIM DA PÁGINA DE PERFIL*/
 
