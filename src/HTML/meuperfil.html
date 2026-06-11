@@ -31,10 +31,28 @@
 
 
     <button class="editar-perfil1" id="btn-editar" onclick="toggleEditar()">Editar perfil</button>
-    <button class="sair-perfil1" id="btn-editar" onclick="togglesairdoperfil()">Sair</button>
+    <button class="sair-perfil1" id="btn-sair-perfil" onclick="togglesairdoperfil()">Sair</button>
     
     
     <script>
+
+    //sair do perfil//
+function togglesairdoperfil() {
+    // 1. Remove as informações de login salvas na memória do navegador
+    localStorage.removeItem('estaAutenticado');
+    localStorage.removeItem('usuarioLogado');
+
+    // 2. Dá um aviso visual opcional de que saiu com sucesso
+    alert("Você saiu da sua conta!");
+
+    // 3. Redireciona o usuário imediatamente para a tela de login
+    // Como os seus arquivos estão na mesma pasta HTML, basta apontar para "entrar.html"
+    window.location.href = "entrar.html"; 
+}
+
+//termino de sair do perfil//
+
+        
     let editando = false;
 
     function toggleEditar() {
