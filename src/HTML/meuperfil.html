@@ -36,36 +36,17 @@
     
     <script>
 
-    //sair do perfil//
-function togglesairdoperfil() {
-    // 1. Remove as informações de login salvas na memória do navegador
-    localStorage.removeItem('estaAutenticado');
-    localStorage.removeItem('usuarioLogado');
+   let editando = false;
 
-    // 2. Dá um aviso visual opcional de que saiu com sucesso
-    alert("Você saiu da sua conta!");
-
-    // 3. Redireciona o usuário imediatamente para a tela de login
-    // Como os seus arquivos estão na mesma pasta HTML, basta apontar para "entrar.html"
-    window.location.href = "entrar.html"; 
-}
-
-//termino de sair do perfil//
-
-        
-    let editando = false;
-
-    function toggleEditar() {
+function toggleEditar() {
     const btn = document.getElementById('btn-editar');
     const avisoFoto = document.getElementById('aviso-foto');
-    
-    
     const classesSimples = ['Nome', 'idade', 'cidade'];
 
     if (!editando) {
+        
         editando = true;
         if (btn) btn.innerText = "Salvar perfil";
-        
         
         if (avisoFoto) {
             avisoFoto.style.display = "flex";
@@ -91,7 +72,7 @@ function togglesairdoperfil() {
             }
         });
 
-       
+        
         const elementoBio = document.querySelector('.Historia-minha');
         if (elementoBio) {
             const bioAtual = elementoBio.innerText;
@@ -103,10 +84,8 @@ function togglesairdoperfil() {
         editando = false;
         if (btn) btn.innerText = "Editar perfil";
         
-        
         if (avisoFoto) avisoFoto.style.display = "none";
 
-        
         const inputs = document.querySelectorAll('.input-perfil-dinamico');
         inputs.forEach(input => {
             const className = input.getAttribute('data-classe');
@@ -116,13 +95,23 @@ function togglesairdoperfil() {
             }
         });
 
-        
         const textareaBio = document.querySelector('.textarea-perfil-dinamico');
         const elementoBio = document.querySelector('.Historia-minha');
         if (textareaBio && elementoBio) {
             elementoBio.innerHTML = textareaBio.value;
         }
     }
+}
+
+
+function togglesairdoperfil() {
+    localStorage.removeItem('estaAutenticado');
+    localStorage.removeItem('usuarioLogado');
+    
+    alert("Você deslogou com sucesso! Esperamos ter você de volta no futuro!");
+    
+    
+    window.location.href = "entrar.html"; 
 }
 
 
@@ -136,36 +125,13 @@ function acionarEscolhaFoto() {
 function atualizarFoto(input) {
     if (input.files && input.files[0]) {
         const leitor = new FileReader();
-        
         leitor.onload = function(e) {
             const imgPerfil = document.querySelector('.foto-perfil');
-            if (imgPerfil) {
-                imgPerfil.src = e.target.result;
-            }
+            if (imgPerfil) imgPerfil.src = e.target.result;
         }
-        
         leitor.readAsDataURL(input.files[0]);
     }
 }
-
-     
-const estaAutenticado = localStorage.getItem('estaAutenticado');
-    const usuarioLogado = localStorage.getItem('usuarioLogado');
-
-    
-    if (estaAutenticado !== 'true') {
-        alert("Acesso negado! Por favor, faça o login primeiro.");
-        window.location.href = "entrar.html"; 
-        return;
-    }
-
-    
-    const campoNomePerfil = document.querySelector('.Nome');
-    if (campoNomePerfil && usuarioLogado) {
-        // Se quiser exibir o e-mail de quem logou no lugar do nome estático
-        // campoNomePerfil.innerText = usuarioLogado; 
-    }
-
 
         
         
