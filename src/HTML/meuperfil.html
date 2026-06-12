@@ -31,40 +31,48 @@
 
 
     <button class="editar-perfil1" id="btn-editar" onclick="toggleEditar()">Editar perfil</button>
+    <button class="sair-perfil1" id="btn-sair-perfil" onclick="togglesairdoperfil()">Sair</button>
+    
     
     <script>
-    let editando = false;
+
+   let editando = false;
 
 function toggleEditar() {
     const btn = document.getElementById('btn-editar');
     const avisoFoto = document.getElementById('aviso-foto');
-    
     const classesSimples = ['Nome', 'idade', 'cidade'];
 
     if (!editando) {
         
         editando = true;
-        btn.innerText = "Salvar perfil";
+        if (btn) btn.innerText = "Salvar perfil";
         
-        
-        if (avisoFoto) avisoFoto.style.display = "flex";
-                       avisoFoto.style.alignItems = "center";!important
-                       avisoFoto.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
-                       avisoFoto.style.color = "#ffffff";
-                       avisoFoto.style.fontWeight = "bold";
-                       avisoFoto.style.borderradius= "15px"
-                       avisoFoto.style.height= "20px"
-                       avisoFoto.style.width= "70%"
-        
-        
+        if (avisoFoto) {
+            avisoFoto.style.display = "flex";
+            avisoFoto.style.alignItems = "center";
+            avisoFoto.style.justifyContent = "center";
+            avisoFoto.style.position = "absolute";
+            avisoFoto.style.top = "0";
+            avisoFoto.style.left = "0";
+            avisoFoto.style.width = "30%";
+            avisoFoto.style.height = "40%";
+            avisoFoto.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+            avisoFoto.style.color = "#ffffff";
+            avisoFoto.style.fontWeight = "bold";
+            avisoFoto.style.cursor = "pointer";
+            avisoFoto.style.borderradius = "20px"
+            avisoFoto.style.margintop = "100px"
+            avisoFoto.style.margin = "80px"
+            
+        }
 
         
         classesSimples.forEach(className => {
-            const elemento = document.querySelector(`.${className}`);
+            const elemento = document.querySelector('.' + className);
             if (elemento) {
                 const textoAtual = elemento.innerText;
-                
-                elemento.innerHTML = `<input type="text" value="${textoAtual}" class="input-perfil-dinamico" data-classe="${className}">`;
+                elemento.innerHTML = '<input type="text" value="' + textoAtual + '" class="input-perfil-dinamico" data-classe="' + className + '" style="padding: 4px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; margin: 2px 0;">';
             }
         });
 
@@ -72,34 +80,42 @@ function toggleEditar() {
         const elementoBio = document.querySelector('.Historia-minha');
         if (elementoBio) {
             const bioAtual = elementoBio.innerText;
-            elementoBio.innerHTML = `<textarea class="textarea-perfil-dinamico" rows="3">${bioAtual}</textarea>`;
+            elementoBio.innerHTML = '<textarea class="textarea-perfil-dinamico" rows="4" style="width: 100%; max-width: 500px; padding: 6px; font-family: inherit; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">' + bioAtual + '</textarea>';
         }
 
     } else {
         
         editando = false;
-        btn.innerText = "Editar perfil";
-        
+        if (btn) btn.innerText = "Editar perfil";
         
         if (avisoFoto) avisoFoto.style.display = "none";
 
-        
         const inputs = document.querySelectorAll('.input-perfil-dinamico');
         inputs.forEach(input => {
             const className = input.getAttribute('data-classe');
-            const elementoOriginal = document.querySelector(`.${className}`);
+            const elementoOriginal = document.querySelector('.' + className);
             if (elementoOriginal) {
                 elementoOriginal.innerHTML = input.value;
             }
         });
 
-        
         const textareaBio = document.querySelector('.textarea-perfil-dinamico');
         const elementoBio = document.querySelector('.Historia-minha');
         if (textareaBio && elementoBio) {
             elementoBio.innerHTML = textareaBio.value;
         }
     }
+}
+
+
+function togglesairdoperfil() {
+    localStorage.removeItem('estaAutenticado');
+    localStorage.removeItem('usuarioLogado');
+    
+    alert("Você deslogou com sucesso! Esperamos ter você de volta no futuro!");
+    
+    
+    window.location.href = "entrar.html"; 
 }
 
 
@@ -113,37 +129,13 @@ function acionarEscolhaFoto() {
 function atualizarFoto(input) {
     if (input.files && input.files[0]) {
         const leitor = new FileReader();
-        
         leitor.onload = function(e) {
-            
             const imgPerfil = document.querySelector('.foto-perfil');
-            if (imgPerfil) {
-                imgPerfil.src = e.target.result;
-            }
+            if (imgPerfil) imgPerfil.src = e.target.result;
         }
-        
         leitor.readAsDataURL(input.files[0]);
     }
 }
-
-//PARTE QUE MANTEM O USUARIO LOGADO//       
-const estaAutenticado = localStorage.getItem('estaAutenticado');
-    const usuarioLogado = localStorage.getItem('usuarioLogado');
-
-    
-    if (estaAutenticado !== 'true') {
-        alert("Acesso negado! Por favor, faça o login primeiro.");
-        window.location.href = "entrar.html"; 
-        return;
-    }
-
-    
-    const campoNomePerfil = document.querySelector('.Nome');
-    if (campoNomePerfil && usuarioLogado) {
-        // Se quiser exibir o e-mail de quem logou no lugar do nome estático
-        // campoNomePerfil.innerText = usuarioLogado; 
-    }
-
 
         
         

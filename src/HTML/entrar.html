@@ -25,8 +25,6 @@
             <div id="title_header">
                 <h1>AdoPet</h1>
                 <p>Amor em cada adoção</p>
-                <a href="..\HTML\entrar.html"
-                    class="entre-cadastre"><strong>Entre ou se cadastre agora!</strong></a>
             </div>
 
         </div>
@@ -126,82 +124,67 @@
 
     <!--FIM DO MENU LATERAL-->
 
-
+    <main>
     <div class="card-inteiro">
-        <div class="card-body">
-            <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/pet-adoption-center-logo-animal-shelter-design-template-7661b87d0259d0e1f04038cac182b646_screen.jpg?ts=1698525910"
-                class="logo" alt="logo do site">
-
-            <h1 class="Nome-do-site">Nome do site</h1>
-
-            <p class="texto">Bem-vindo de volta!</p>
-
+        <div class="coluna-imagem">
+            <img src="https://i.pinimg.com/1200x/f3/4d/1b/f34d1bae1b4a9f05a8efc84ab6c3f49a.jpg" alt="Cachorro Beagle do doaPET">
         </div>
-        <div class="Formulario">
 
+        <div class="coluna-formulario">
+            <h1 class="Nome-do-site">Seja bem vindo!</h1>
+            <p class="texto">Nós da doaPET ficamos felizes em te ver aqui</p>
 
-            <label for="Como colocar" class="email1"><strong>Email:</strong></label>
+            <form class="Formulario" onsubmit="fazerLogin(event)">
+                <div class="campo-grupo">
+                    <label for="exampleFormControlInput1" class="label-form">Email:</label>
+                    <input type="email" class="input-form" id="exampleFormControlInput1" placeholder="usuario@mail.com" required>
+                </div>
 
-            <input type="Formulario de email" class="Email" id="exampleFormControlInput1"
-                placeholder="name@example.com">
+                <div class="campo-grupo">
+                    <label for="InputPassword5" class="label-form">Senha:</label>
+                    <input type="password" id="InputPassword5" class="input-form" placeholder="••••••••••••••••••••••••" required>
+                </div>
 
+                <script>
+                    const usuariosCadastrados = [
+                        { email: "maria.silva@email.com", senha: "123" }
+                    ];
 
-            <label for="Formulario de senha" class="Senha"><strong>Senha:</strong></label>
+                    function fazerLogin(event) {
+                        event.preventDefault();
 
-            <input type="password" id="InputPassword5" class="senha2" placeholder="Digite sua senha">
+                        const emailDigitado = document.getElementById('exampleFormControlInput1').value.trim();
+                        const senhaDigitada = document.getElementById('InputPassword5').value;
+                        const msgErro = document.getElementById('mensagem-erro');
 
-            <div id="Mensagem do que é necessário para a senha" class="Mensagem-da-senha">
-                <p2>Sua senha deve ter entre 8 e 20 caracteres, conter letras e números e não deve conter espaços,
-                    caracteres especiais ou emojis</p2>
+                        msgErro.style.display = "none";
+
+                        const cadastrosReais = JSON.parse(localStorage.getItem('usuarios')) || usuariosCadastrados;
+                        const usuarioEncontrado = cadastrosReais.find(user => user.email === emailDigitado && user.senha === senhaDigitada);
+
+                        if (usuarioEncontrado) {
+                            localStorage.setItem('usuarioLogado', emailDigitado);
+                            localStorage.setItem('estaAutenticado', 'true');
+                            window.location.href = "meuperfil.html";
+                        } else {
+                            msgErro.style.display = "block";
+                        }
+                    }             
+                </script>
+
+                <button type="submit" class="Botao" id="btn-entrar">ENTRAR</button>
+            </form>
+
+            <div id="mensagem-erro" style="display: none; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; margin: 15px auto; border-radius: 5px; font-size: 14px; text-align: center; font-weight: bold; max-width: 300px;">
+                Conta não encontrada. Verifique os dados ou cadastre-se!
             </div>
 
-
+            <h2 class="texto-rodape">Ainda não tem uma conta? <a href="../HTML/cadastrar.html" class="Cadastre-se">Cadastre-se gratuitamente!</a></h2>
         </div>
-
-        <script>
-           const usuariosCadastrados = [
-    { email: "maria.silva@email.com", senha: "123" }
-];
-
-    function fazerLogin(event) {
-    event.preventDefault();
-
-    const emailDigitado = document.getElementById('exampleFormControlInput1').value.trim();
-    const senhaDigitada = document.getElementById('InputPassword5').value;
-    const msgErro = document.getElementById('mensagem-erro');
-
-    msgErro.style.display = "none";
-
-    const cadastrosReais = JSON.parse(localStorage.getItem('usuarios')) || usuariosCadastrados;
-    
-
-    const usuarioEncontrado = cadastrosReais.find(user => user.email === emailDigitado && user.senha === senhaDigitada);
-
-    if (usuarioEncontrado) {
-        
-        localStorage.setItem('usuarioLogado', emailDigitado);
-        localStorage.setItem('estaAutenticado', 'true');
-
-        
-        window.location.href = "meuperfil.html"; 
-    } else {
-        
-        msgErro.style.display = "block";
-    }
-}             
-        </script>
-
-
-
-
-
-        <a href="#" class="Botao" id="btn-entrar" onclick="fazerLogin(event)">Entrar</a>
-        <div id="mensagem-erro" style="display: none; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; margin: 15px auto; border-radius: 5px; font-size: 14px; text-align: center; font-weight: bold; max-width: 300px;">
-        Conta não encontrada. Verifique os dados ou cadastre-se!
     </div>
-        <h2>Ainda não tem uma conta?<strong><a href="../HTML/cadastrar.html" class="Cadastre-se">Cadastre-se gratuitamente!</a></strong></h2>
-    </div>
-    </div>
+</main>
+
+
 
 
 
