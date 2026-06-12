@@ -8,15 +8,14 @@ message: >-
   Web da PUC Minas.
 type: software
 authors:
-  - given-names: Aluno 1
-    family-names: Nome Completo
-    email: aluno@pucminas.br
+   - given-names: Mariana Eduarda
+    family-names: Correa da Silva
+    email: eduardamariana200906@gmail.com
     affiliation: PUC Minas
-  - given-names: Hugo
-    name-particle: 'B '
-    family-names: de Paula
+  - given-names: Clovis
+    family-names: Lemos Tavares
     name-suffix: Prof.
-    email: hugo@pucminas.br
+    email: clovis.lemos@sga.pucminas.br
     affiliation: PUC Minas
 
 - given-names: Aluno 1
