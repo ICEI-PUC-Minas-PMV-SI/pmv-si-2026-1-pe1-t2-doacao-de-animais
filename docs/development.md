@@ -27,8 +27,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | João | index.html |
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula | cadastro-noticia.html |
+|RF-001| Interface simples e funcional para facilitar a interação do usuário | Caio | index.html |
+|RF-002| Menu interativo  | Caio |index.html |
+|RF-003| area de perguntas frequentes para tirar dúvidas | Caio | index.html |
+|RF-004| Um tutorial simplificado de como funciona  | Caio |index.html |
+|RF-005| Area de entrar para que o usuario possa ter um perfil personalizado | Mariana | index.html |
+|RF-006| Area de cadastro para que novos usuarios possam fazer parte da comunidade  | Mariana |index.html |
+|RF-007| Página de perfil personalizada | Mariana | index.html |
+|RF-008| Funcionalidades do java script (entrar, cadastrar, histórico de adoção, perfil do usuario- parte editavel)  | Mariana |index.html |
+|RF-009| Area de pet's disponiveis | Mariana | index.html |
+|RF-010| Area de doação para que o usuario possa ajudar as ONG's  | Caio |index.html |
+|RF-011| Rodapé da pagina com area para entrar em contato | Caio | index.html |
+|RF-012| Possibilidade do usuario sair do deslogar do perfil  | Mariana |index.html |
+
+
+
+
+
 
 ## Descrição das estruturas:
 
