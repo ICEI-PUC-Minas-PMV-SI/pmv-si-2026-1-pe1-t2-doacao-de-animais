@@ -8,15 +8,17 @@ message: >-
   Web da PUC Minas.
 type: software
 authors:
-   - given-names: Mariana Eduarda
-    family-names: Correa da Silva
-    email: eduardamariana200906@gmail.com
-    affiliation: PUC Minas
-  - given-names: Clovis
-    family-names: Lemos Tavares
-    name-suffix: Prof.
-    email: clovis.lemos@sga.pucminas.br
-    affiliation: PUC Minas
+   - given-names: "Mariana Eduarda"
+    family-names: "Correa da Silva"
+    email: "eduardamariana200906@gmail.com"
+    affiliation: "PUC Minas"
+  - given-names: "Clovis"
+    family-names: "Lemos Tavares"
+    name-suffix: "Prof."
+    email: "clovis.lemos@sga.pucminas.br"
+    affiliation: "PUC Minas"
+
+
 
 
     orcid: 'https://orcid.org/0000-0002-6193-3205'
