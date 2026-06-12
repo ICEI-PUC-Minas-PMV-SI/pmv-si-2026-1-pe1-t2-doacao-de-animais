@@ -10,51 +10,54 @@
   <body>
 <div class="container" style="display: flex; flex-direction: column; align-items: center;" id="ititle">
     <h1>Cadastre Pets para adoção</h1>
-        <h2> Informações do Pet </h2>
-</div>
+    <h2> Informações do Pet </h2>
+    </div>
 
 <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-<form name="meuForm" onsubmit="capturarDados(event)" method="post" action="">
-    <label for="name">Nome:</label>
-    <input type="text" id="iname" name="name" placeholder="Digite o nome do pet" required><br><br>
+    <form name="meuForm" onsubmit="capturarDados(event)" method="post" action="">
+        <label for="name">Nome:</label>
+        <input type="text" id="iname" name="name" placeholder="Digite o nome do pet" required><br><br>
     
-    <label for="age">Idade Aproximada(Meses):</label>
-    <input type="number" id="iage" name="age" placeholder="Digite a idade aproximada em meses" required><br><br>
+        <label for="age">Idade Aproximada(Meses):</label>
+        <input type="number" id="iage" name="age" placeholder="Digite a idade aproximada em meses" required><br><br>
 
 
-<div class="ratio-box"> Sexo: <br>
+    <div class="ratio-box"> Sexo: <br>
         <input type="radio" name="gender" id="male" class="form-control" value="male">
         <label for="male" class="form-label">Macho</label>
-</div>
-<div class="ratio-box">
+    </div>
+
+    <div class="ratio-box">
         <input type="radio" name="gender" id="female" class="form-control" value="female">
         <label for="female" class="form-label">Fêmea</label>
-</div>
-    <br>
+    </div> <br>
 
-<div class="ratio-box"> Tipo de Pet: <br>
+    <div class="ratio-box"> Tipo de Pet: <br>
         <input type="radio" name="typepet" id="itypedog" class="form-control" value="typedog">
         <label for="typepdog" class="form-label">Cachorro</label>
-</div>
-<div class="ratio-box">
+    </div>
+
+    <div class="ratio-box">
         <input type="radio" name="typepet" id="itypecat" class="form-control" value="typecat">
         <label for="typepcat" class="form-label">Gato</label>
-</div>
-<div class="ratio-box">
+    </div>
+
+    <div class="ratio-box">
         <input type="radio" name="typepet" id="itypebird" class="form-control" value="typebird">
         <label for="typebird" class="form-label">Pássaro</label>
-</div>
-<div class="ratio-box">
+    </div>
+
+    <div class="ratio-box">
         <input type="radio" name="typepet" id="itypeothers" class="form-control" value="typeothers">
         <label for="typepothers" class="form-label">Outros</label>
- </div>
-<br>
+    </div> <br>
+
     <div class="ratio-box"> Informações de Saúde: <br>
         <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
         <label for="saude" class="form-label">Vacinas em Dia?</label>
     </div>
 
-<div class="ratio-box"> 
+    <div class="ratio-box"> 
         <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
         <label for="saude" class="form-label">Possui Alguma Deficiencia?</label>
     </div>
@@ -62,21 +65,20 @@
     <div class="ratio-box"> 
         <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
         <label for="saude" class="form-label">Possui Alguma Doença?</label>
-    </div>
+    </div> <br>
 
-<br>
     <label for="contact">Contato:</label>
-    <input type="tel" id="icontact" name="contact" placeholder="(31)99999-9999" required><br><br>
+        <input type="tel" id="icontact" name="contact" placeholder="(31)99999-9999" required><br><br>
 
     <label for="email">Email:</label>
-    <input type="email" id="iemail" name="email" placeholder="meuemail@gmail.com"><br><br>
+        <input type="email" id="iemail" name="email" placeholder="meuemail@gmail.com"><br><br>
 
     
     <label for="msg"> Texto:</label> <br>
-    <textarea id="imsg" name="msg" rows="12" cols="50" placeholder="Fale um pouco sobre o pet.Ex:A quanto tempo ele esta com você, seu temperamento, onde o encontrou, e outras informações relevantes."></textarea> <br><br>
+        <textarea id="imsg" name="msg" rows="12" cols="50" placeholder="Fale um pouco sobre o pet.Ex:A quanto tempo ele esta com você, seu temperamento, onde o encontrou, e outras informações relevantes."></textarea> <br><br>
 
     <label for="fotos"> Envie até 5 fotos: </label> <BR>
-    <input type="file" id="ifile" name="file" accept="image/*" required><br>
+        <input type="file" id="ifile" name="file" accept="image/*" required><br>
 
     <div class="container" id="preview"></div>
 </div>
