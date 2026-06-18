@@ -4,114 +4,183 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de cadastro de pets</title>
-
   </head>
   
-  <body>
-<div class="container" style="display: flex; flex-direction: column; align-items: center;" id="ititle">
-    <h1>Cadastre Pets para adoção</h1>
-    <h2> Informações do Pet </h2>
-    </div>
-
-<div class="container" style="display: flex; flex-direction: column; align-items: center;">
-    <form name="meuForm" onsubmit="capturarDados(event)" method="post" action="">
-        <label for="name">Nome:</label>
-        <input type="text" id="iname" name="name" placeholder="Digite o nome do pet" required><br><br>
+    <body>
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;" id="ititle">
+        <h1>Cadastre Pets Para Adoção</h1>
+        <style>
     
-        <label for="age">Idade Aproximada(Meses):</label>
-        <input type="number" id="iage" name="age" placeholder="Digite a idade aproximada em meses" required><br><br>
+        h1{ margin: 0;
+        color: rgb(0, 1, 44);
+        font-size: 27px;
+        margin-bottom: 3%;
+        font-family: "Montserrat", sans-serif
+        }
+        </style>
+        <h2> Informações do Pet </h2>
+        </div>
+
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+        <form name="meuForm" onsubmit="capturarDados(event)" method="post" action="">
+            <label for="name">Nome:</label>
+            <input type="text" id="iname" name="name" placeholder="Digite o nome do pet" required><br><br>
+    
+            <label for="age">Idade Aproximada(Meses):</label>
+            <input type="number" id="iage" name="age" placeholder="Digite a idade aproximada em meses" required><br><br>
 
 
-    <div class="ratio-box"> Sexo: <br>
-        <input type="radio" name="gender" id="male" class="form-control" value="male">
-        <label for="male" class="form-label">Macho</label>
-    </div>
+        <div class="ratio-box"> Sexo: <br>
+            <input type="radio" name="gender" id="male" class="form-control" value="male">
+            <label for="male" class="form-label">Macho</label>
+        </div>
 
-    <div class="ratio-box">
-        <input type="radio" name="gender" id="female" class="form-control" value="female">
-        <label for="female" class="form-label">Fêmea</label>
-    </div> <br>
+        <div class="ratio-box">
+            <input type="radio" name="gender" id="female" class="form-control" value="female">
+            <label for="female" class="form-label">Fêmea</label>
+        </div> <br>
 
-    <div class="ratio-box"> Tipo de Pet: <br>
-        <input type="radio" name="typepet" id="itypedog" class="form-control" value="typedog">
-        <label for="typepdog" class="form-label">Cachorro</label>
-    </div>
+        <div class="ratio-box"> Tipo de Pet: <br>
+            <input type="radio" name="typepet" id="itypedog" class="form-control" value="typedog">
+            <label for="typepdog" class="form-label">Cachorro</label>
+        </div>
 
-    <div class="ratio-box">
-        <input type="radio" name="typepet" id="itypecat" class="form-control" value="typecat">
-        <label for="typepcat" class="form-label">Gato</label>
-    </div>
+        <div class="ratio-box">
+            <input type="radio" name="typepet" id="itypecat" class="form-control" value="typecat">
+            <label for="typepcat" class="form-label">Gato</label>
+        </div>
 
-    <div class="ratio-box">
-        <input type="radio" name="typepet" id="itypebird" class="form-control" value="typebird">
-        <label for="typebird" class="form-label">Pássaro</label>
-    </div>
+        <div class="ratio-box">
+            <input type="radio" name="typepet" id="itypebird" class="form-control" value="typebird">
+            <label for="typebird" class="form-label">Pássaro</label>
+        </div>
 
-    <div class="ratio-box">
-        <input type="radio" name="typepet" id="itypeothers" class="form-control" value="typeothers">
-        <label for="typepothers" class="form-label">Outros</label>
-    </div> <br>
+        <div class="ratio-box">
+            <input type="radio" name="typepet" id="itypeothers" class="form-control" value="typeothers">
+            <label for="typepothers" class="form-label">Outros</label>
+        </div> <br>
 
-    <div class="ratio-box"> Informações de Saúde: <br>
-        <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
-        <label for="saude" class="form-label">Vacinas em Dia?</label>
-    </div>
+        <div class="ratio-box"> Informações de Saúde: <br>
+            <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
+            <label for="saude" class="form-label">Vacinas em Dia?</label>
+        </div>
 
-    <div class="ratio-box"> 
-        <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
-        <label for="saude" class="form-label">Possui Alguma Deficiencia?</label>
-    </div>
+        <div class="ratio-box"> 
+            <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
+            <label for="saude" class="form-label">Possui Alguma Deficiencia?</label>
+        </div>
 
-    <div class="ratio-box"> 
-        <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
-        <label for="saude" class="form-label">Possui Alguma Doença?</label>
-    </div> <br>
+        <div class="ratio-box"> 
+            <input type="checkbox" name="saude" id="isaude" class="form-control" value="saude">
+            <label for="saude" class="form-label">Possui Alguma Doença?</label>
+        </div> <br>
 
-    <label for="contact">Contato:</label>
-        <input type="tel" id="icontact" name="contact" placeholder="(31)99999-9999" required><br><br>
+        <label for="contact">Contato:</label>
+            <input type="tel" id="icontact" name="contact" placeholder="(31)99999-9999" required><br><br>
 
-    <label for="email">Email:</label>
-        <input type="email" id="iemail" name="email" placeholder="meuemail@gmail.com"><br><br>
+        <label for="email">Email:</label>
+            <input type="email" id="iemail" name="email" placeholder="meuemail@gmail.com"><br><br>
 
     
-    <label for="msg"> Texto:</label> <br>
-        <textarea id="imsg" name="msg" rows="12" cols="50" placeholder="Fale um pouco sobre o pet.Ex:A quanto tempo ele esta com você, seu temperamento, onde o encontrou, e outras informações relevantes."></textarea> <br><br>
+        <label for="msg"> Texto:</label> <br>
+            <textarea id="imsg" name="msg" rows="12" cols="50" placeholder="Fale um pouco sobre o pet.Ex:A quanto tempo ele esta com você, seu temperamento, onde o encontrou, e outras informações relevantes."></textarea> <br><br>
 
-    <label for="fotos"> Envie até 5 fotos: </label> <BR>
-        <input type="file" id="ifile" name="file" accept="image/*" required><br>
+        <label for="fotos"> Envie até 5 fotos: </label> <BR>
+            <input type="file" id="ifile" name="file" accept="image/*" required><br>
 
-    <div class="container" id="preview"></div>
-</div>
+        <div class="container" id="preview"></div>
+        </form>
+        <style> 
+    
+        body {
+    background-color: rgba(9, 129, 99, 0.959);
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-right: 2%;
+    box-shadow: 1px 1px 30px #000000;
+    z-index: 1000;
+    flex-direction: column;
+        }
+   
+        </style>
+        </div>
 
-    <script>
-        document.getElementbyid("ifile").onchange = function(e) {
-            const arquivos = e.target.files;
-            const preview = document.getElementById("preview");
-            preview.innerHTML = "";
 
-            if(arquivos.length>5) {
-                alert("Você pode enviar no máximo 5 fotos.");
-                this.value = "";
-                return;
+        <script>
+            document.getElementById("ifile").onchange = function(e) {
+                const arquivos = e.target.files;
+                const preview = document.getElementById("preview");
+                preview.innerHTML = "";
+
+                if(arquivos.length>5) {
+                    alert("Você pode enviar no máximo 5 fotos.");
+                    this.value = "";
+                    return;
+                
             }
-            for(let i=0;i<arquivos.length;i++) {
-                const img=document.createElement("img");
-                img.src = URL.createObjectURL(arquivos[i]);
-                img.width=150;
-                img.style.margin= "5px";
-                img.onload=() => URL.revokeObjectURL(img.src);
-                preview.appendChild(img);
-            }
-        };
-    </script>
-<div class="container" style="display: flex; flex-direction: column; align-items: center;">
-    <input type="submit" value="Enviar">
-    </form>
+                for(let i=0;i<arquivos.length;i++) {
+                    const img=document.createElement("img");
+                    img.src = URL.createObjectURL(arquivos[i]);
+                    img.width=150;
+                    img.style.margin= "5px";
+                    img.onload=() => URL.revokeObjectURL(img.src);
+                    preview.appendChild(img);
+                }
+            };
+        </script>
+    
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+        <input type="submit" value="Enviar">
+        <style>
+        input[type="submit"] {
+            background-color: #fcfcfc;
+            color: rgb(0, 0, 0);
+            border: 2.5px solid #011446c7;
+            padding: 5px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        </style>
+        </div>
+        <script>
+        <!-- Função para capturar os dados do_ formulário e salvar no localStorage -->
 
-    <link rel="stylesheet" href="style.css">
+
+            const form = document.querySelector('form'); 
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); /* Evita o envio do formulário */
+
+                const nome = document.getElementById('iname').value;
+                const idade = document.getElementById('iage').value;
+                const contato = document.getElementById('icontact').value;
+                const email = document.getElementById('iemail').value;
+                const msg = document.getElementById('imsg').value;
+
+                const dadosForm = {
+                    nome: nome,
+                    idade: idade,
+                    contato: contato,
+                    email: email,
+                    msg: msg
+                };
+            /* salva no localStorage convertendo para string*/
+                localStorage.setItem('dadosPet', JSON.stringify(dadosForm));
+
+                console.log('cadastroPet:', dadosForm);
+                alert('Formulário salvo com sucesso!');
+
+                alert('Formulário enviado com sucesso!');
+
+                form.reset(); /* Limpa o formulário após o envio */
+            });
+
+            function atualizarPerfil() {
+        const inputs = document.querySelectorAll('input[data-classe]');
+            }
+        </script>
+
+    
 
 </body>
-
-<footer></footer>
-
 </html>

@@ -144,17 +144,71 @@ function atualizarFoto(input) {
 
 </article>  
 
-<div class="informacoes">
-<section class="Informações-pessoais">
-    <h6>Informações pessoais</h6>
-    <p class="email">maria.silva@email.com</p>
-    
-    <p class="telefone">(11) 99999-9999</p>
-    
-    <p class="mapa">Rua dos Pet Lovers, 123 - São Paulo, SP</p>
+<div class="informacoes"
+    style="margin-top: -85%; margin-left: 37%; width: 62%; display: flex; flex-direction: column; align-items: center; padding: 5%; box-sizing: border-box;">
 
-    <button class="editar-perfil" id="btn-editar-info" onclick="toggleEditarInfo()"> "Editar informações</button>
+ <section class="Informações-pessoais"> 
+  
+    <div class= "titulo-informações-pessoais">  
+        <h6>Informações Pessoais</h6>
+            <style>
+                .titulo-informações-pessoais {
+                margin-top: absolute;
+                margin-left: absolute;
+                margin-right: absolute;
+                width: 2%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1%;
+                box-sizing: border-box;
+            }
+            </style>
+        
+            <div>
+                <style>
+                    .email, .telefone, .mapa {
+                    background-color: #f0f0f00a;
+                    padding: 12px;
+                    border-radius: 8px;
+                    position: relative;
+                    margin: -5% 0 12px 0;
+                    margin-left: -45%;
+                    margin-right:auto
+                    }
+                    </style>
+                
+                <p class="email">maria.silva@email.com</p>
+    
+                <p class="telefone">(11) 99999-9999</p>
+    
+                <p class="mapa">Rua dos Pet Lovers, 123 - São Paulo, SP</p>
+                 
+            </div>
+    </div>
 
+</div>   
+
+    <div class="botoesinfo">
+        <button class="editar-perfil" id="btn-editar-info" onclick="toggleEditarInfo()"> Editar informações</button>
+   
+  
+        <button class="editar-perfil" id="btn-editar-info">
+        <a href="../HTML/cadastro.pets.html">Cadastrar Pet</a></button>
+
+        <style>
+                    #botoesinfo {
+                    display: flex;
+                    margin-left: absolute;
+                    margin-right: auto;
+                    height: auto;                   
+
+                    }
+        </style>
+    </div>
+<
+    <script>
+   let editandoInfo = false;
 </section>
 <script>
 let editandoInfo = false;
